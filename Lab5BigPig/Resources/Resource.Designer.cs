@@ -87,20 +87,23 @@ namespace Lab5BigPig
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f05000b
-			public const int dieImage = 2131034123;
+			// aapt resource value: 0x7f05000c
+			public const int dieImage = 2131034124;
 			
-			// aapt resource value: 0x7f05000f
-			public const int endTurnBtn = 2131034127;
+			// aapt resource value: 0x7f050010
+			public const int endTurnBtn = 2131034128;
 			
 			// aapt resource value: 0x7f050000
 			public const int frameLayout1 = 2131034112;
 			
-			// aapt resource value: 0x7f050010
-			public const int newGameBtn = 2131034128;
+			// aapt resource value: 0x7f05000a
+			public const int linearLayout1 = 2131034122;
 			
-			// aapt resource value: 0x7f05000d
-			public const int numPointsTV = 2131034125;
+			// aapt resource value: 0x7f050011
+			public const int newGameBtn = 2131034129;
+			
+			// aapt resource value: 0x7f05000e
+			public const int numPointsTV = 2131034126;
 			
 			// aapt resource value: 0x7f050004
 			public const int p1EditText = 2131034116;
@@ -126,17 +129,17 @@ namespace Lab5BigPig
 			// aapt resource value: 0x7f050003
 			public const int player2 = 2131034115;
 			
-			// aapt resource value: 0x7f05000c
-			public const int pointsTV = 2131034124;
+			// aapt resource value: 0x7f05000d
+			public const int pointsTV = 2131034125;
 			
 			// aapt resource value: 0x7f050001
 			public const int relativeLayout1 = 2131034113;
 			
-			// aapt resource value: 0x7f05000e
-			public const int rollDieBtn = 2131034126;
+			// aapt resource value: 0x7f05000f
+			public const int rollDieBtn = 2131034127;
 			
-			// aapt resource value: 0x7f05000a
-			public const int textView1 = 2131034122;
+			// aapt resource value: 0x7f05000b
+			public const int textView1 = 2131034123;
 			
 			static Id()
 			{

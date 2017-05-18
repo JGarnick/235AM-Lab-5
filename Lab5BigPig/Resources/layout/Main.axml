@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:minWidth="25px"
     android:minHeight="25px"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/frameLayout1"
-    android:background="@drawable/table"
-    xmlns:tools="http://schemas.android.com/tools"
-    >
+    android:background="@drawable/table">
     <RelativeLayout
         android:minWidth="25px"
         android:minHeight="25px"
@@ -42,7 +41,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/p2EditText"
             android:layout_below="@id/player2"
-            android:layout_marginLeft="49.0dp"
+            android:layout_marginLeft="65.5dp"
             android:layout_toRightOf="@id/p1EditText" />
         <TextView
             android:text="Score"
@@ -78,19 +77,25 @@
             android:layout_below="@id/p2ScoreTV"
             android:layout_marginLeft="170.0dp"
             android:layout_toRightOf="@id/p1ScoreTotal" />
-        <TextView
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_below="@id/p2ScoreTotal"
-            android:id="@+id/textView1"
-            android:layout_marginTop="38.5dp"
-            android:layout_marginLeft="171.0dp" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1"
+            android:gravity="center"
+            android:layout_marginTop="25.5dp">
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1" />
+        </LinearLayout>
         <ImageView
             android:src="@drawable/die8side1"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_below="@id/textView1"
+            android:layout_below="@id/linearLayout1"
             android:id="@+id/dieImage"
             android:layout_marginLeft="176.5dp"
             android:layout_marginTop="13.0dp" />
