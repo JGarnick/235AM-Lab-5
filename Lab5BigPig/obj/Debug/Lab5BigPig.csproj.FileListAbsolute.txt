@@ -22,3 +22,4 @@ C:\Users\Christina\Desktop\CS235AM Android\Lab 5\Lab5BigPig\Lab5BigPig\obj\Debug
 C:\Users\Christina\Desktop\CS235AM Android\Lab 5\Lab5BigPig\Lab5BigPig\obj\Debug\uploadflags.txt
 C:\Users\Christina\Desktop\CS235AM Android\Lab 5\Lab5BigPig\Lab5BigPig\bin\Debug\Lab5BigPig.dll.mdb
 C:\Users\Christina\Desktop\CS235AM Android\Lab 5\Lab5BigPig\Lab5BigPig\obj\Debug\android\assets\Lab5BigPig.dll.mdb
+C:\Users\Christina\Desktop\CS235AM Android\Lab 5\Lab5BigPig\Lab5BigPig\obj\Debug\res\layout-land\main.xml

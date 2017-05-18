@@ -26,7 +26,13 @@ public final class R {
         public static final int dieImage=0x7f05000c;
         public static final int endTurnBtn=0x7f050010;
         public static final int frameLayout1=0x7f050000;
+        public static final int frameLayout8=0x7f050012;
         public static final int linearLayout1=0x7f05000a;
+        public static final int linearLayout2=0x7f050013;
+        public static final int linearLayout3=0x7f050014;
+        public static final int linearLayout4=0x7f050015;
+        public static final int linearLayout6=0x7f050016;
+        public static final int linearLayout7=0x7f050017;
         public static final int newGameBtn=0x7f050011;
         public static final int numPointsTV=0x7f05000e;
         public static final int p1EditText=0x7f050004;

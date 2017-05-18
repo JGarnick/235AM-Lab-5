@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>5/17/2017 5:33:57 PM</xs:documentation>
+    <xs:documentation>5/17/2017 7:22:50 PM</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -17351,7 +17351,13 @@
             <xs:enumeration value="@id/dieImage" />
             <xs:enumeration value="@id/endTurnBtn" />
             <xs:enumeration value="@id/frameLayout1" />
+            <xs:enumeration value="@id/frameLayout8" />
             <xs:enumeration value="@id/linearLayout1" />
+            <xs:enumeration value="@id/linearLayout2" />
+            <xs:enumeration value="@id/linearLayout3" />
+            <xs:enumeration value="@id/linearLayout4" />
+            <xs:enumeration value="@id/linearLayout6" />
+            <xs:enumeration value="@id/linearLayout7" />
             <xs:enumeration value="@id/newGameBtn" />
             <xs:enumeration value="@id/numPointsTV" />
             <xs:enumeration value="@id/p1EditText" />
@@ -17363,7 +17369,6 @@
             <xs:enumeration value="@id/player1" />
             <xs:enumeration value="@id/player2" />
             <xs:enumeration value="@id/pointsTV" />
-            <xs:enumeration value="@id/relativeLayout1" />
             <xs:enumeration value="@id/rollDieBtn" />
             <xs:enumeration value="@id/textView1" />
             <xs:enumeration value="@android:id/accessibilityActionContextClick" />
