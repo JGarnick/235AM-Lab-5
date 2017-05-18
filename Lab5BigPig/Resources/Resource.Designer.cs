@@ -117,6 +117,12 @@ namespace Lab5BigPig
 			// aapt resource value: 0x7f050017
 			public const int linearLayout7 = 2131034135;
 			
+			// aapt resource value: 0x7f050018
+			public const int linearLayout8 = 2131034136;
+			
+			// aapt resource value: 0x7f050019
+			public const int linearLayout9 = 2131034137;
+			
 			// aapt resource value: 0x7f050011
 			public const int newGameBtn = 2131034129;
 			

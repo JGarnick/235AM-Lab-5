@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>5/17/2017 7:22:50 PM</xs:documentation>
+    <xs:documentation>5/17/2017 8:09:50 PM</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -17358,6 +17358,8 @@
             <xs:enumeration value="@id/linearLayout4" />
             <xs:enumeration value="@id/linearLayout6" />
             <xs:enumeration value="@id/linearLayout7" />
+            <xs:enumeration value="@id/linearLayout8" />
+            <xs:enumeration value="@id/linearLayout9" />
             <xs:enumeration value="@id/newGameBtn" />
             <xs:enumeration value="@id/numPointsTV" />
             <xs:enumeration value="@id/p1EditText" />

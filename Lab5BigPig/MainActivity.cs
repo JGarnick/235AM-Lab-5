@@ -66,7 +66,7 @@ namespace Lab5BigPig
             
             dieImage.SetImageResource(Resource.Drawable.Die8Side1);
             turnPoints = "0";
-            whoseTurnText = "Enter your names and start a game!";
+            whoseTurnText = "Enter names and press start";
             rollDieButton.Enabled = false;
             endTurnButton.Enabled = false;
             points = 0;
@@ -163,9 +163,14 @@ namespace Lab5BigPig
                 SetDieImage(bundle.GetInt("DieImageNum", 1));
                 p1Score = bundle.GetString("P1Score", "0");
                 p2Score = bundle.GetString("P2Score", "0");
-                whoseTurnText = bundle.GetString("WhoseTurnName", "");
+
+                if (bundle.GetInt("WhoseTurnLogic", 0) != 2)
+                    whoseTurnText = bundle.GetString("WhoseTurnName", "") + "'s Turn";
+                else
+                    whoseTurnText = bundle.GetString("WhoseTurnName", "");
                 turnPoints = bundle.GetString("TurnPoints", "0");
                 rollDieButton.Enabled = bundle.GetBoolean("RollDiceEnabled", false);
+                endTurnButton.Enabled = bundle.GetBoolean("EndTurnEnabled", false);
                 p1Name = bundle.GetString("p1Name", "");
                 p2Name = bundle.GetString("p2Name", "");
 
@@ -299,10 +304,15 @@ namespace Lab5BigPig
                 outState.PutInt("WhoseTurnLogic", 0);
                 outState.PutString("WhoseTurnName", player1.Name);
             }
-            else
+            else if(player2.IsTurn)
             {
                 outState.PutInt("WhoseTurnLogic", 1);
                 outState.PutString("WhoseTurnName", player2.Name);
+            }
+            else
+            {
+                outState.PutInt("WhoseTurnLogic", 2);
+                outState.PutString("WhoseTurnName", whoseTurnText);
             }
 
             outState.PutInt("DieImageNum", dieImageNum);
@@ -311,6 +321,7 @@ namespace Lab5BigPig
             outState.PutString("p1Name", player1EditText.Text);
             outState.PutString("p2Name", player2EditText.Text);
             outState.PutBoolean("RollDiceEnabled", rollDieButton.Enabled);
+            outState.PutBoolean("EndTurnEnabled", endTurnButton.Enabled);
 
             //Store players
             outState.PutBoolean("p1IsTurn", player1.IsTurn);

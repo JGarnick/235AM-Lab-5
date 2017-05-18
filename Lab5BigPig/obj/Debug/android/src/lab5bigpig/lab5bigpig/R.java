@@ -33,6 +33,8 @@ public final class R {
         public static final int linearLayout4=0x7f050015;
         public static final int linearLayout6=0x7f050016;
         public static final int linearLayout7=0x7f050017;
+        public static final int linearLayout8=0x7f050018;
+        public static final int linearLayout9=0x7f050019;
         public static final int newGameBtn=0x7f050011;
         public static final int numPointsTV=0x7f05000e;
         public static final int p1EditText=0x7f050004;
