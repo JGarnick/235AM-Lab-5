@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using Android.Preferences;
 
 namespace Lab5BigPig
 {
@@ -20,10 +21,15 @@ namespace Lab5BigPig
             base.OnCreate(savedInstanceState);
 
             // Create your fragment here
+
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
+            ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(Application.Context);
+            ISharedPreferencesEditor editor = prefs.Edit();
+            editor.PutString("FragName", "IntroFrag");
+            editor.Apply();
             // Use this to return your custom view for this Fragment
             return inflater.Inflate(Resource.Layout.IntroFrag, container, false);
 

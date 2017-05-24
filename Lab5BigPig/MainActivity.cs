@@ -8,6 +8,7 @@ using Android.OS;
 using Android.Text;
 using static Lab5BigPig.Resource;
 using Android.Content.Res;
+using Android.Preferences;
 
 namespace Lab5BigPig
 {
@@ -109,6 +110,9 @@ namespace Lab5BigPig
         int dieImageNum = 0;
         int points = 0;
 
+        Button playButton;
+        EditText introPlayer1Name;
+        EditText introPlayer2Name;
         TextView p1ScoreTotal;
         TextView p2ScoreTotal;
         TextView whoseTurn;
@@ -135,30 +139,60 @@ namespace Lab5BigPig
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            p1ScoreTotal = FindViewById<TextView>(Resource.Id.p1ScoreTotal);
-            p2ScoreTotal = FindViewById<TextView>(Resource.Id.p2ScoreTotal);
-            whoseTurn = FindViewById<TextView>(Resource.Id.textView1);
-            p1ScoreTV = FindViewById<TextView>(Resource.Id.p1ScoreTV);
-            p2ScoreTV = FindViewById<TextView>(Resource.Id.p2ScoreTV);
-            newGameButton = FindViewById<Button>(Resource.Id.newGameBtn);
-            rollDieButton = FindViewById<Button>(Resource.Id.rollDieBtn);
-            endTurnButton = FindViewById<Button>(Resource.Id.endTurnBtn);
-            player1TextView = FindViewById<TextView>(Resource.Id.player1);
-            player2TextView = FindViewById<TextView>(Resource.Id.player2);
-            dieImage = FindViewById<ImageView>(Resource.Id.dieImage);
-            pointsTextView = FindViewById<TextView>(Resource.Id.numPointsTV);
-            player1EditText = FindViewById<EditText>(Resource.Id.p1EditText);
-            player2EditText = FindViewById<EditText>(Resource.Id.p2EditText);
-            game = new GameLogic();
-            
+            ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(this);
+            ISharedPreferencesEditor editor = prefs.Edit();
+            string fragName = prefs.GetString("FragName", "");
 
+            if (fragName == "IntroFrag")
+            {
+                playButton = FindViewById<Button>(Resource.Id.playBtn);
+                introPlayer1Name = FindViewById<EditText>(Resource.Id.enterP1Name);
+                introPlayer2Name = FindViewById<EditText>(Resource.Id.enterP2Name);
 
-            if (bundle == null)
+                editor.PutString("P1NameEntered", introPlayer1Name.Text);
+                editor.PutString("P2NameEntered", introPlayer2Name.Text);
+                editor.PutBoolean("StartNewGame", false);
+                editor.Apply();
+
+                playButton.Click += delegate
+                {
+                    editor.PutBoolean("StartNewGame", true);
+                    editor.Apply();
+                };
+            }
+            else if(bundle.GetString("FragName", "") == "UIFrag")
+            {
+                p1ScoreTotal = FindViewById<TextView>(Resource.Id.p1ScoreTotal);
+                p2ScoreTotal = FindViewById<TextView>(Resource.Id.p2ScoreTotal);
+                whoseTurn = FindViewById<TextView>(Resource.Id.textView1);
+                p1ScoreTV = FindViewById<TextView>(Resource.Id.p1ScoreTV);
+                p2ScoreTV = FindViewById<TextView>(Resource.Id.p2ScoreTV);
+                newGameButton = FindViewById<Button>(Resource.Id.newGameBtn);
+                rollDieButton = FindViewById<Button>(Resource.Id.rollDieBtn);
+                endTurnButton = FindViewById<Button>(Resource.Id.endTurnBtn);
+                player1TextView = FindViewById<TextView>(Resource.Id.player1);
+                player2TextView = FindViewById<TextView>(Resource.Id.player2);
+                dieImage = FindViewById<ImageView>(Resource.Id.dieImage);
+                pointsTextView = FindViewById<TextView>(Resource.Id.numPointsTV);
+                player1EditText = FindViewById<EditText>(Resource.Id.p1EditText);
+                player2EditText = FindViewById<EditText>(Resource.Id.p2EditText);
+                game = new GameLogic();
+            }
+
+            bool newGame = prefs.GetBoolean("StartNewGame", true);
+            if(!newGame)
+            {
+                return;
+            }
+            else
             {
                 NewGameValues();
                 SetValues();
+                editor.PutBoolean("NewGame", false);
+                editor.Apply();
             }
-            else
+            
+            if(bundle != null)
             {
                 SetDieImage(bundle.GetInt("DieImageNum", 1));
                 p1Score = bundle.GetString("P1Score", "0");
