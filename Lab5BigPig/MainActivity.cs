@@ -132,6 +132,9 @@ namespace Lab5BigPig
         Player player1 = new Player();
         Player player2 = new Player();
 
+        ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(Application.Context);
+        
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -139,7 +142,6 @@ namespace Lab5BigPig
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(this);
             ISharedPreferencesEditor editor = prefs.Edit();
             string fragName = prefs.GetString("FragName", "");
 
@@ -160,7 +162,7 @@ namespace Lab5BigPig
                     editor.Apply();
                 };
             }
-            else if(bundle.GetString("FragName", "") == "UIFrag")
+            else if(prefs.GetString("FragName", "") == "UIFrag")
             {
                 p1ScoreTotal = FindViewById<TextView>(Resource.Id.p1ScoreTotal);
                 p2ScoreTotal = FindViewById<TextView>(Resource.Id.p2ScoreTotal);
@@ -329,42 +331,49 @@ namespace Lab5BigPig
         {
             base.OnSaveInstanceState(outState);
 
-            outState.PutString("P1Score", p1Score);
-            outState.PutString("P2Score", p2Score);
-
-            //TODO Save current player's turn and set it
-            if(player1.IsTurn)
+            if (prefs.GetString("FragName", "") == "UIFrag")
             {
-                outState.PutInt("WhoseTurnLogic", 0);
-                outState.PutString("WhoseTurnName", player1.Name);
+                outState.PutString("P1Score", p1Score);
+                outState.PutString("P2Score", p2Score);
+
+                //TODO Save current player's turn and set it
+                if (player1.IsTurn)
+                {
+                    outState.PutInt("WhoseTurnLogic", 0);
+                    outState.PutString("WhoseTurnName", player1.Name);
+                }
+                else if (player2.IsTurn)
+                {
+                    outState.PutInt("WhoseTurnLogic", 1);
+                    outState.PutString("WhoseTurnName", player2.Name);
+                }
+                else
+                {
+                    outState.PutInt("WhoseTurnLogic", 2);
+                    outState.PutString("WhoseTurnName", whoseTurnText);
+                }
+
+                outState.PutInt("DieImageNum", dieImageNum);
+                outState.PutString("TurnPoints", turnPoints);
+
+                outState.PutString("p1Name", player1EditText.Text);
+                outState.PutString("p2Name", player2EditText.Text);
+                outState.PutBoolean("RollDiceEnabled", rollDieButton.Enabled);
+                outState.PutBoolean("EndTurnEnabled", endTurnButton.Enabled);
+
+                //Store players
+                outState.PutBoolean("p1IsTurn", player1.IsTurn);
+                outState.PutBoolean("p2IsTurn", player2.IsTurn);
+                outState.PutInt("p1Score", player1.Score);
+                outState.PutInt("p2Score", player2.Score);
+                outState.PutBoolean("p1ScoreLimit", player1.ScoreLimitReached);
+                outState.PutBoolean("p2ScoreLimit", player2.ScoreLimitReached);
             }
-            else if(player2.IsTurn)
+            else if (prefs.GetString("FragName", "") == "IntroFrag")
             {
-                outState.PutInt("WhoseTurnLogic", 1);
-                outState.PutString("WhoseTurnName", player2.Name);
+                outState.PutString("P1EnteredName", introPlayer1Name.Text);
+                outState.PutString("P2EnteredName", introPlayer2Name.Text);
             }
-            else
-            {
-                outState.PutInt("WhoseTurnLogic", 2);
-                outState.PutString("WhoseTurnName", whoseTurnText);
-            }
-
-            outState.PutInt("DieImageNum", dieImageNum);
-            outState.PutString("TurnPoints", turnPoints);
-
-            outState.PutString("p1Name", player1EditText.Text);
-            outState.PutString("p2Name", player2EditText.Text);
-            outState.PutBoolean("RollDiceEnabled", rollDieButton.Enabled);
-            outState.PutBoolean("EndTurnEnabled", endTurnButton.Enabled);
-
-            //Store players
-            outState.PutBoolean("p1IsTurn", player1.IsTurn);
-            outState.PutBoolean("p2IsTurn", player2.IsTurn);
-            outState.PutInt("p1Score", player1.Score);
-            outState.PutInt("p2Score", player2.Score);
-            outState.PutBoolean("p1ScoreLimit", player1.ScoreLimitReached);
-            outState.PutBoolean("p2ScoreLimit", player2.ScoreLimitReached);
-
         }
     }
 }
