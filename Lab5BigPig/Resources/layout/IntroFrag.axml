@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout1">
+  <TextView
+      android:text="How to Play:"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/howtoplay"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="25.5dp"
+      android:textSize="24dp" />
+  <TextView
+      android:text="The game of pig is played by rolling the 8-sided die and accumulating points. A player may roll as many times on their turn as they wish, however rolling an 8 will reduce that player's accumulated points to 0 and force their turn to end. Once a score of 100 has been achieved, the player with the highest score wins."
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="431.0dp"
+      android:layout_height="wrap_content"
+      android:id="@+id/instructions"
+      android:layout_below="@id/howtoplay"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="18.5dp"
+      android:gravity="center" />
+  <TextView
+      android:text="Player 1"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/p1NameLabel"
+      android:layout_below="@id/instructions"
+      android:layout_marginTop="16.5dp"
+      android:layout_marginLeft="124.5dp" />
+  <TextView
+      android:text="Player 2"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/p2NameLabel"
+      android:layout_below="@id/instructions"
+      android:layout_marginTop="16.5dp"
+      android:layout_toRightOf="@id/p1NameLabel"
+      android:layout_marginLeft="162.5dp" />
+  <EditText
+      android:id="@+id/enterP1Name"
+      android:layout_width="100dp"
+      android:layout_height="24dp"
+      android:layout_below="@id/p1NameLabel"
+      android:layout_marginLeft="102.0dp"
+      android:layout_marginTop="14.0dp" />
+  <EditText
+      android:id="@+id/enterP2Name"
+      android:layout_width="100dp"
+      android:layout_height="24dp"
+      android:layout_below="@id/p1NameLabel"
+      android:layout_toRightOf="@id/enterP1Name"
+      android:layout_marginLeft="128.0dp"
+      android:layout_marginTop="14.0dp" />
+  <TextView
+      android:text="Enter names for players 1 and 2 and then press Play! to start"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/enterP1Name"
+      android:id="@+id/pressPlayTV"
+      android:layout_marginTop="19.5dp"
+      android:layout_centerHorizontal="true" />
+  <Button
+      android:text="Play!"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/pressPlayTV"
+      android:id="@+id/playBtn"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="39.5dp"
+      android:textSize="20dp" />
+</RelativeLayout>

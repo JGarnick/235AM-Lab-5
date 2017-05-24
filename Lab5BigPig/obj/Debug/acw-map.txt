@@ -1,4 +1,12 @@
+Lab5BigPig.IntroFrag, Lab5BigPig;md5373e8b326d3ed76a56bb5bffe4f26c3b.IntroFrag
+Lab5BigPig.IntroFrag, Lab5BigPig, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5373e8b326d3ed76a56bb5bffe4f26c3b.IntroFrag
+Lab5BigPig.IntroFrag;md5373e8b326d3ed76a56bb5bffe4f26c3b.IntroFrag
+lab5bigpig.IntroFrag;md5373e8b326d3ed76a56bb5bffe4f26c3b.IntroFrag
 Lab5BigPig.MainActivity, Lab5BigPig;md5373e8b326d3ed76a56bb5bffe4f26c3b.MainActivity
 Lab5BigPig.MainActivity, Lab5BigPig, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5373e8b326d3ed76a56bb5bffe4f26c3b.MainActivity
 Lab5BigPig.MainActivity;md5373e8b326d3ed76a56bb5bffe4f26c3b.MainActivity
 lab5bigpig.MainActivity;md5373e8b326d3ed76a56bb5bffe4f26c3b.MainActivity
+Lab5BigPig.UIFrag, Lab5BigPig;md5373e8b326d3ed76a56bb5bffe4f26c3b.UIFrag
+Lab5BigPig.UIFrag, Lab5BigPig, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5373e8b326d3ed76a56bb5bffe4f26c3b.UIFrag
+Lab5BigPig.UIFrag;md5373e8b326d3ed76a56bb5bffe4f26c3b.UIFrag
+lab5bigpig.UIFrag;md5373e8b326d3ed76a56bb5bffe4f26c3b.UIFrag
