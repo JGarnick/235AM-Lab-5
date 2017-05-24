@@ -42,16 +42,19 @@ public final class R {
         public static final int linearLayout7=0x7f050021;
         public static final int linearLayout8=0x7f050023;
         public static final int linearLayout9=0x7f050024;
+        public static final int mainMenuBtn=0x7f050028;
         public static final int newGameBtn=0x7f050022;
         public static final int numPointsTV=0x7f050018;
         public static final int p1EditText=0x7f050011;
         public static final int p1NameLabel=0x7f050004;
         public static final int p1ScoreTV=0x7f050012;
         public static final int p1ScoreTotal=0x7f050013;
+        public static final int p1TextView=0x7f050025;
         public static final int p2EditText=0x7f05001b;
         public static final int p2NameLabel=0x7f050007;
         public static final int p2ScoreTV=0x7f05001c;
         public static final int p2ScoreTotal=0x7f05001d;
+        public static final int p2TextView=0x7f050026;
         public static final int playBtn=0x7f05000a;
         public static final int player1=0x7f050010;
         public static final int player2=0x7f05001a;
@@ -59,6 +62,7 @@ public final class R {
         public static final int pressPlayTV=0x7f050009;
         public static final int relativeLayout1=0x7f050000;
         public static final int rollDieBtn=0x7f05001f;
+        public static final int startGameBtn=0x7f050027;
         public static final int textView1=0x7f050015;
     }
     public static final class layout {

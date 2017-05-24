@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>5/23/2017 8:46:26 PM</xs:documentation>
+    <xs:documentation>5/23/2017 9:21:30 PM</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -17348,6 +17348,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@+id/" />
             <xs:enumeration value="@+id/checkedTextView1" />
+            <xs:enumeration value="@id/dieImage" />
+            <xs:enumeration value="@id/endTurnBtn" />
             <xs:enumeration value="@id/enterP1Name" />
             <xs:enumeration value="@id/enterP2Name" />
             <xs:enumeration value="@id/frameLayout1" />
@@ -17356,10 +17358,26 @@
             <xs:enumeration value="@id/intro_frag" />
             <xs:enumeration value="@id/introPlayer1Layout" />
             <xs:enumeration value="@id/introPlayer2Layout" />
+            <xs:enumeration value="@id/linearLayout1" />
+            <xs:enumeration value="@id/mainMenuBtn" />
+            <xs:enumeration value="@id/numPointsTV" />
             <xs:enumeration value="@id/p1NameLabel" />
+            <xs:enumeration value="@id/p1ScoreTotal" />
+            <xs:enumeration value="@id/p1ScoreTV" />
+            <xs:enumeration value="@id/p1TextView" />
             <xs:enumeration value="@id/p2NameLabel" />
+            <xs:enumeration value="@id/p2ScoreTotal" />
+            <xs:enumeration value="@id/p2ScoreTV" />
+            <xs:enumeration value="@id/p2TextView" />
             <xs:enumeration value="@id/playBtn" />
+            <xs:enumeration value="@id/player1" />
+            <xs:enumeration value="@id/player2" />
+            <xs:enumeration value="@id/pointsTV" />
             <xs:enumeration value="@id/pressPlayTV" />
+            <xs:enumeration value="@id/relativeLayout1" />
+            <xs:enumeration value="@id/rollDieBtn" />
+            <xs:enumeration value="@id/startGameBtn" />
+            <xs:enumeration value="@id/textView1" />
             <xs:enumeration value="@android:id/accessibilityActionContextClick" />
             <xs:enumeration value="@android:id/accessibilityActionScrollDown" />
             <xs:enumeration value="@android:id/accessibilityActionScrollLeft" />

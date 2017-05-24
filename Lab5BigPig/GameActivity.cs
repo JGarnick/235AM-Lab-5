@@ -1,12 +1,13 @@
 ﻿
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Widget;
 
 namespace Lab5BigPig
 {
-    [Activity(Label = "GameActivity", LaunchMode = Android.Content.PM.LaunchMode.SingleInstance)]
+    [Activity(Label = "GameActivity", LaunchMode = LaunchMode.SingleInstance, ScreenOrientation = ScreenOrientation.Portrait)]
     public class GameActivity : Activity
     {
         
@@ -50,8 +51,8 @@ namespace Lab5BigPig
 
             pointsTextView.Text = turnPoints;
             whoseTurn.Text = whoseTurnText;
-            player1EditText.Text = p1Name;
-            player2EditText.Text = p2Name;
+            player1TextView.Text = p1Name;
+            player2TextView.Text = p2Name;
             points = int.Parse(turnPoints);
         }
 
@@ -59,10 +60,10 @@ namespace Lab5BigPig
         {
             p1Score = "0";
             p2Score = "0";
-
+            SetNames(player1, player2);
             dieImage.SetImageResource(Resource.Drawable.Die8Side1);
             turnPoints = "0";
-            whoseTurnText = "Enter names and press start";
+            whoseTurnText = "Press Start to start the game!";
             rollDieButton.Enabled = false;
             endTurnButton.Enabled = false;
             points = 0;
@@ -110,15 +111,14 @@ namespace Lab5BigPig
         TextView whoseTurn;
         TextView p1ScoreTV;
         TextView p2ScoreTV;
-        Button newGameButton;
+        Button startGameButton;
         Button rollDieButton;
         Button endTurnButton;
         TextView player1TextView;
         TextView player2TextView;
         ImageView dieImage;
         TextView pointsTextView;
-        EditText player1EditText;
-        EditText player2EditText;
+        Button mainMenuButton;
         GameLogic game;
 
         Player player1 = new Player();
@@ -135,15 +135,14 @@ namespace Lab5BigPig
             whoseTurn = FindViewById<TextView>(Resource.Id.textView1);
             p1ScoreTV = FindViewById<TextView>(Resource.Id.p1ScoreTV);
             p2ScoreTV = FindViewById<TextView>(Resource.Id.p2ScoreTV);
-            newGameButton = FindViewById<Button>(Resource.Id.newGameBtn);
+            startGameButton = FindViewById<Button>(Resource.Id.startGameBtn);
             rollDieButton = FindViewById<Button>(Resource.Id.rollDieBtn);
             endTurnButton = FindViewById<Button>(Resource.Id.endTurnBtn);
-            player1TextView = FindViewById<TextView>(Resource.Id.player1);
-            player2TextView = FindViewById<TextView>(Resource.Id.player2);
+            player1TextView = FindViewById<TextView>(Resource.Id.p1TextView);
+            player2TextView = FindViewById<TextView>(Resource.Id.p2TextView);
             dieImage = FindViewById<ImageView>(Resource.Id.dieImage);
             pointsTextView = FindViewById<TextView>(Resource.Id.numPointsTV);
-            player1EditText = FindViewById<EditText>(Resource.Id.p1EditText);
-            player2EditText = FindViewById<EditText>(Resource.Id.p2EditText);
+            mainMenuButton = FindViewById<Button>(Resource.Id.mainMenuBtn);
             game = new GameLogic();
             
 
@@ -234,14 +233,12 @@ namespace Lab5BigPig
                 pointsTextView.Text = points.ToString();
             };
 
-            newGameButton.Click += delegate
+            startGameButton.Click += delegate
             {
                 NewGameValues();
+                SetValues();
                 game.NewGame(player1, player2); //Setting IsTurn property to determine a random turn
-
-                SetNames(player1, player2);
                 SetWhoseTurnText(player1, player2, whoseTurn);
-
 
                 rollDieButton.Enabled = true;
                 endTurnButton.Enabled = true;
@@ -283,6 +280,12 @@ namespace Lab5BigPig
 
 
             };
+
+            mainMenuButton.Click += delegate
+            {
+                var menu = new Intent(this, typeof(MainActivity));
+                StartActivity(menu);
+            };
         }
         protected override void OnSaveInstanceState(Bundle outState)
         {
@@ -311,8 +314,8 @@ namespace Lab5BigPig
             outState.PutInt("DieImageNum", dieImageNum);
             outState.PutString("TurnPoints", turnPoints);
 
-            outState.PutString("p1Name", player1EditText.Text);
-            outState.PutString("p2Name", player2EditText.Text);
+            outState.PutString("p1Name", player1TextView.Text);
+            outState.PutString("p2Name", player2TextView.Text);
             outState.PutBoolean("RollDiceEnabled", rollDieButton.Enabled);
             outState.PutBoolean("EndTurnEnabled", endTurnButton.Enabled);
 
@@ -329,7 +332,8 @@ namespace Lab5BigPig
         {
             base.OnResume();
 
-            
+            NewGameValues();
+            SetValues();
         }
 
         protected override void OnNewIntent(Intent intent)

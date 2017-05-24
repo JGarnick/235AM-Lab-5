@@ -1,18 +1,13 @@
-﻿using System;
-using Android.App;
+﻿using Android.App;
 using Android.Content;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Text;
-using static Lab5BigPig.Resource;
-using Android.Content.Res;
-using Android.Preferences;
+
+using Android.Content.PM;
 
 namespace Lab5BigPig
 {
-    [Activity(Label = "Lab5BigPig", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Lab5BigPig", MainLauncher = true, Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : Activity
     {
 

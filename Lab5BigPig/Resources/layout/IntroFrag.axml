@@ -44,8 +44,8 @@
             android:layout_below="@id/instructions" />
         <EditText
             android:id="@+id/enterP1Name"
-            android:layout_width="100dp"
-            android:layout_height="24dp"
+            android:layout_width="112.0dp"
+            android:layout_height="40.5dp"
             android:layout_below="@id/p1NameLabel" />
     </LinearLayout>
     <LinearLayout
@@ -67,8 +67,8 @@
             android:id="@+id/p2NameLabel" />
         <EditText
             android:id="@+id/enterP2Name"
-            android:layout_width="100dp"
-            android:layout_height="24dp" />
+            android:layout_width="112.0dp"
+            android:layout_height="40.0dp" />
     </LinearLayout>
     <TextView
         android:text="Enter names for players 1 and 2 and then press Play! to start"

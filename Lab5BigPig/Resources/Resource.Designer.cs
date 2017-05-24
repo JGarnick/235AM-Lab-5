@@ -144,6 +144,9 @@ namespace Lab5BigPig
 			// aapt resource value: 0x7f050024
 			public const int linearLayout9 = 2131034148;
 			
+			// aapt resource value: 0x7f050028
+			public const int mainMenuBtn = 2131034152;
+			
 			// aapt resource value: 0x7f050022
 			public const int newGameBtn = 2131034146;
 			
@@ -162,6 +165,9 @@ namespace Lab5BigPig
 			// aapt resource value: 0x7f050013
 			public const int p1ScoreTotal = 2131034131;
 			
+			// aapt resource value: 0x7f050025
+			public const int p1TextView = 2131034149;
+			
 			// aapt resource value: 0x7f05001b
 			public const int p2EditText = 2131034139;
 			
@@ -173,6 +179,9 @@ namespace Lab5BigPig
 			
 			// aapt resource value: 0x7f05001d
 			public const int p2ScoreTotal = 2131034141;
+			
+			// aapt resource value: 0x7f050026
+			public const int p2TextView = 2131034150;
 			
 			// aapt resource value: 0x7f05000a
 			public const int playBtn = 2131034122;
@@ -194,6 +203,9 @@ namespace Lab5BigPig
 			
 			// aapt resource value: 0x7f05001f
 			public const int rollDieBtn = 2131034143;
+			
+			// aapt resource value: 0x7f050027
+			public const int startGameBtn = 2131034151;
 			
 			// aapt resource value: 0x7f050015
 			public const int textView1 = 2131034133;
