@@ -1,5 +1,5 @@
 ﻿using System;
-using static Lab5BigPig.MainActivity;
+using static Lab5BigPig.GameActivity;
 
 namespace Lab5BigPig
 {

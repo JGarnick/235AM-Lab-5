@@ -26,10 +26,6 @@ namespace Lab5BigPig
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(Application.Context);
-            ISharedPreferencesEditor editor = prefs.Edit();
-            editor.PutString("FragName", "IntroFrag");
-            editor.Apply();
             // Use this to return your custom view for this Fragment
             return inflater.Inflate(Resource.Layout.IntroFrag, container, false);
 

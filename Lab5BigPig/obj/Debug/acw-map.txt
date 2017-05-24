@@ -1,3 +1,7 @@
+Lab5BigPig.GameActivity, Lab5BigPig;md5373e8b326d3ed76a56bb5bffe4f26c3b.GameActivity
+Lab5BigPig.GameActivity, Lab5BigPig, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5373e8b326d3ed76a56bb5bffe4f26c3b.GameActivity
+Lab5BigPig.GameActivity;md5373e8b326d3ed76a56bb5bffe4f26c3b.GameActivity
+lab5bigpig.GameActivity;md5373e8b326d3ed76a56bb5bffe4f26c3b.GameActivity
 Lab5BigPig.IntroFrag, Lab5BigPig;md5373e8b326d3ed76a56bb5bffe4f26c3b.IntroFrag
 Lab5BigPig.IntroFrag, Lab5BigPig, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5373e8b326d3ed76a56bb5bffe4f26c3b.IntroFrag
 Lab5BigPig.IntroFrag;md5373e8b326d3ed76a56bb5bffe4f26c3b.IntroFrag
